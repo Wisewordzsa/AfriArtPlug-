@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AfriArtPlug | Your Plug for Digital Creativity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #F5F5F5;
+      color: #2A2D34;
+    }
+
+    header {
+      background-color: #2A2D34;
+      color: #FFD700;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #1f2126;
+      padding: 0.8rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #2A2D34;
+    }
+
+    form {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    form button {
+      background-color: #FFD700;
+      color: #2A2D34;
+      padding: 0.8rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #2A2D34;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AfriArtPlug</h1>
+  <p>Your Plug for Digital Creativity</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#quote">Get a Quote</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    AfriArtPlug is a digital design service under Machaka Capital Holdings, focused on empowering African creativity. 
+    We offer professional, affordable, and mobile-first digital art solutions including brand design, illustration, and merchandise graphics.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Logo Design</h3>
+      <p>Modern, professional logos tailored to your brand’s identity.</p>
+    </div>
+    <div class="card">
+      <h3>Custom Illustrations</h3>
+      <p>High-quality digital art for print, web, or social media.</p>
+    </div>
+    <div class="card">
+      <h3>Merch & T-shirt Designs</h3>
+      <p>Stylish and creative merch-ready artwork for African brands.</p>
+    </div>
+    <div class="card">
+      <h3>Social Media Graphics</h3>
+      <p>Engaging templates and visuals for your brand’s online presence.</p>
+    </div>
+  </div>
+</section>
+
+<section id="quote">
+  <h2>Get a Quote</h2>
+  <form action="mailto:afriartplug@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Full Name" required />
+    <input type="email" name="email" placeholder="Your Email Address" required />
+    <input type="text" name="service" placeholder="Service You Need" required />
+    <textarea name="details" rows="5" placeholder="Tell us more about your project..." required></textarea>
+    <button type="submit">Send Quote Request</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>📧 Email: <a href="mailto:afriartplug@gmail.com">afriartplug@gmail.com</a></p>
+  <p>💬 WhatsApp: <a href="https://wa.me/27750834801" target="_blank">+27 75 083 4801</a></p>
+</section>
+
+<footer>
+  © 2025 AfriArtPlug. Powered by Machaka Capital Holdings.
+</footer>
+
+</body>
+</html>
