@@ -1,79 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfriArtPlug — Born Free Creativity</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AfriArtPlug - Digital Art & Design</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #121212;
+      color: #eee;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    a {
+      color: #ff6f91;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff94a7;
+    }
+
+    header {
+      background: #1f1f1f;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    nav ul ul {
+      display: none;
+      position: absolute;
+      background: #222;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 200;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li:hover > ul {
+      display: flex;
+    }
+
+    nav ul li > a {
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* Hero/banner */
+    .hero {
+      background: linear-gradient(135deg, #ff6f91, #ff94a7);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: #121212;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+    section > h2 {
+      font-size: 2rem;
+      border-bottom: 3px solid #ff6f91;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: #ff6f91;
+    }
+    section h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #ff94a7;
+    }
+    section h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      color: #ffb1bd;
+    }
+
+    /* Product grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .product-card {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #ff6f91aa;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #ff94a7cc;
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .product-card .product-info {
+      padding: 0.75rem 1rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-card .product-name {
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .product-card .product-price {
+      color: #ff6f91;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>AfriArtPlug</h1>
-            <p>Born Free · Bold · Creative · Ready to Change the World</p>
-            <a href="#quote" class="btn">Get Started</a>
-        </div>
-    </header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#art">Art</a>
+        <ul>
+          <li><a href="#clothing">Clothing</a>
+            <ul>
+              <li><a href="#men">Men</a></li>
+              <li><a href="#women">Women</a></li>
+              <li><a href="#children">Children</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#accessories">Accessories</a>
+        <ul>
+          <li><a href="#flags">Flags</a></li>
+          <li><a href="#hats">Hats</a></li>
+          <li><a href="#artifacts">Artifacts</a></li>
+          <li><a href="#keyholders">Key Holders</a></li>
+          <li><a href="#caps">Caps</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <h2>🔥 Our Art Showcase</h2>
-        <div class="gallery-grid">
-            <div><img src="images/art1.jpg" alt="Art 1"><p>Abstract Energy</p></div>
-            <div><img src="images/art2.jpg" alt="Art 2"><p>Urban Soul</p></div>
-            <div><img src="images/art3.jpg" alt="Art 3"><p>Afro Futurism</p></div>
+<section class="hero">
+  <h1>AfriArtPlug</h1>
+  <p>Your gateway to authentic African digital art, clothing & accessories</p>
+</section>
+
+<main>
+
+  <!-- ART Section -->
+  <section id="art">
+    <h2>Art</h2>
+
+    <!-- Clothing -->
+    <section id="clothing">
+      <h3>Clothing</h3>
+
+      <!-- Men -->
+      <section id="men">
+        <h4>Men</h4>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://via.placeholder.com/300x150?text=Men's+T-shirt" alt="Men's T-shirt" />
+            <div class="product-info">
+              <div class="product-name">African Print T-shirt</div>
+              <div class="product-price">R299</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/300x150?text=Men's+Jacket" alt="Men's Jacket" />
+            <div class="product-info">
+              <div class="product-name">Tribal Jacket</div>
+              <div class="product-price">R799</div>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- Women -->
+      <section id="women">
+        <h4>Women</h4>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://via.placeholder.com/300x150?text=Women's+Dress" alt="Women's Dress" />
+            <div class="product-info">
+              <div class="product-name">Kitenge Dress</div>
+              <div class="product-price">R499</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/300x150?text=Women's+Blouse" alt="Women's Blouse" />
+            <div class="product-info">
+              <div class="product-name">Beaded Blouse</div>
+              <div class="product-price">R350</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Children -->
+      <section id="children">
+        <h4>Children</h4>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="https://via.placeholder.com/300x150?text=Children's+T-shirt" alt="Children's T-shirt" />
+            <div class="product-info">
+              <div class="product-name">Colorful Kids Tee</div>
+              <div class="product-price">R199</div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="https://via.placeholder.com/300x150?text=Children's+Hat" alt="Children's Hat" />
+            <div class="product-info">
+              <div class="product-name">Mini Fedora Hat</div>
+              <div class="product-price">R150</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </section>
+
+  <!-- ACCESSORIES Section -->
+  <section id="accessories">
+    <h2>Accessories</h2>
+
+    <section id="flags">
+      <h3>Flags</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=African+Flag" alt="African Flag" />
+          <div class="product-info">
+            <div class="product-name">Pan-African Flag</div>
+            <div class="product-price">R120</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=South+African+Flag" alt="South African Flag" />
+          <div class="product-info">
+            <div class="product-name">South African Flag</div>
+            <div class="product-price">R120</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- White Lotus Collection -->
-    <section class="white-lotus">
-        <h2>🥋 The Order of the White Lotus Collection</h2>
-        <div class="lotus-grid">
-            <div class="product">
-                <img src="images/white-lotus-shirt.jpg" alt="White Lotus Shirt">
-                <h3>White Lotus Emblem Shirt</h3>
-                <p>Soft cotton tee with the legendary insignia.</p>
-                <a href="#quote" class="btn">Order Now</a>
-            </div>
-            <div class="product">
-                <img src="images/white-lotus-robe.jpg" alt="White Lotus Robe">
-                <h3>White Lotus Robe</h3>
-                <p>Elegant robe, worn by the masters.</p>
-                <a href="#quote" class="btn">Order Now</a>
-            </div>
-            <div class="product">
-                <img src="images/white-lotus-pin.jpg" alt="White Lotus Pin">
-                <h3>White Lotus Insignia Pin</h3>
-                <p>Carry the mark of wisdom anywhere.</p>
-                <a href="#quote" class="btn">Order Now</a>
-            </div>
+    <section id="hats">
+      <h3>Hats</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=Baseball+Cap" alt="Baseball Cap" />
+          <div class="product-info">
+            <div class="product-name">Baseball Cap</div>
+            <div class="product-price">R180</div>
+          </div>
         </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=Bucket+Hat" alt="Bucket Hat" />
+          <div class="product-info">
+            <div class="product-name">Bucket Hat</div>
+            <div class="product-price">R170</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Quote Form -->
-    <section class="quote-form" id="quote">
-        <h2>Request a Quote</h2>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Email or WhatsApp" required>
-            <select name="artwork-type">
-                <option>Custom Portrait</option>
-                <option>Character Sketch</option>
-                <option>Abstract Art</option>
-                <option>Clothing & Accessories</option>
-            </select>
-            <textarea name="description" placeholder="Describe your vision..." required></textarea>
-            <button type="submit">Send Request</button>
-        </form>
+    <section id="artifacts">
+      <h3>Artifacts</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=Handcrafted+Mask" alt="Handcrafted Mask" />
+          <div class="product-info">
+            <div class="product-name">Handcrafted Mask</div>
+            <div class="product-price">R350</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=Wooden+Sculpture" alt="Wooden Sculpture" />
+          <div class="product-info">
+            <div class="product-name">Wooden Sculpture</div>
+            <div class="product-price">R450</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 AfriArtPlug | Built for the Born Free Generation</p>
-    </footer>
+    <section id="keyholders">
+      <h3>Key Holders</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=Beaded+Key+Holder" alt="Beaded Key Holder" />
+          <div class="product-info">
+            <div class="product-name">Beaded Key Holder</div>
+            <div class="product-price">R80</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=Leather+Key+Holder" alt="Leather Key Holder" />
+          <div class="product-info">
+            <div class="product-name">Leather Key Holder</div>
+            <div class="product-price">R100</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="caps">
+      <h3>Caps</h3>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=Snapback+Cap" alt="Snapback Cap" />
+          <div class="product-info">
+            <div class="product-name">Snapback Cap</div>
+            <div class="product-price">R190</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://via.placeholder.com/300x150?text=Trucker+Cap" alt="Trucker Cap" />
+          <div class="product-info">
+            <div class="product-name">Trucker Cap</div>
+            <div class="product-price">R175</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 AfriArtPlug. All rights reserved. | Contact: <a href="mailto:machakacapital.holdings@gmail.com">machakacapital.holdings@gmail.com</a> | WhatsApp: +27 75 083 4801
+</footer>
 
 </body>
 </html>
