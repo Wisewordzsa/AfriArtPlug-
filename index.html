@@ -1,38 +1,59 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AfriArtPlug — Digital Art & Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriArtPlug — Born Free Creativity</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Hero Section -->
     <header class="hero">
-        <h1>AfriArtPlug — Where Art Meets Vibes</h1>
-        <p>Original Afro-inspired digital art & design — made personal, made bold.</p>
-        <a href="#quote" class="btn">Get a Custom Artwork</a>
+        <div class="hero-content">
+            <h1>AfriArtPlug</h1>
+            <p>Born Free · Bold · Creative · Ready to Change the World</p>
+            <a href="#quote" class="btn">Get Started</a>
+        </div>
     </header>
 
+    <!-- Gallery Section -->
     <section class="gallery">
-        <h2>Our Art Showcase</h2>
+        <h2>🔥 Our Art Showcase</h2>
         <div class="gallery-grid">
-            <div><img src="images/art1.jpg" alt="Abstract Mood Piece"><p>Abstract Mood Piece</p></div>
-            <div><img src="images/art2.jpg" alt="Modern Afro Expression"><p>Modern Afro Expression</p></div>
-            <div><img src="images/art3.jpg" alt="Character Sketch Concept"><p>Character Sketch Concept</p></div>
+            <div><img src="images/art1.jpg" alt="Art 1"><p>Abstract Energy</p></div>
+            <div><img src="images/art2.jpg" alt="Art 2"><p>Urban Soul</p></div>
+            <div><img src="images/art3.jpg" alt="Art 3"><p>Afro Futurism</p></div>
         </div>
     </section>
 
-    <section class="services">
-        <h2>What We Offer</h2>
-        <ul>
-            <li>🎨 Custom Digital Portraits</li>
-            <li>✏️ Character Design & Sketches</li>
-            <li>🖼️ Abstract Wall Art</li>
-            <li>📦 Ready-to-Print Digital Downloads</li>
-        </ul>
+    <!-- White Lotus Collection -->
+    <section class="white-lotus">
+        <h2>🥋 The Order of the White Lotus Collection</h2>
+        <div class="lotus-grid">
+            <div class="product">
+                <img src="images/white-lotus-shirt.jpg" alt="White Lotus Shirt">
+                <h3>White Lotus Emblem Shirt</h3>
+                <p>Soft cotton tee with the legendary insignia.</p>
+                <a href="#quote" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/white-lotus-robe.jpg" alt="White Lotus Robe">
+                <h3>White Lotus Robe</h3>
+                <p>Elegant robe, worn by the masters.</p>
+                <a href="#quote" class="btn">Order Now</a>
+            </div>
+            <div class="product">
+                <img src="images/white-lotus-pin.jpg" alt="White Lotus Pin">
+                <h3>White Lotus Insignia Pin</h3>
+                <p>Carry the mark of wisdom anywhere.</p>
+                <a href="#quote" class="btn">Order Now</a>
+            </div>
+        </div>
     </section>
 
+    <!-- Quote Form -->
     <section class="quote-form" id="quote">
         <h2>Request a Quote</h2>
         <form action="https://formspree.io/f/your-form-id" method="POST">
@@ -42,31 +63,17 @@
                 <option>Custom Portrait</option>
                 <option>Character Sketch</option>
                 <option>Abstract Art</option>
-                <option>Other</option>
+                <option>Clothing & Accessories</option>
             </select>
-            <textarea name="description" placeholder="Describe what you want..." required></textarea>
+            <textarea name="description" placeholder="Describe your vision..." required></textarea>
             <button type="submit">Send Request</button>
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 AfriArtPlug | Contact: machakacapital.holdings@gmail.com</p>
+        <p>© 2025 AfriArtPlug | Built for the Born Free Generation</p>
     </footer>
-<section class="quote-form" id="quote">
-    <h2>Request a Quote</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Email or WhatsApp" required>
-        <select name="artwork-type">
-            <option>Custom Portrait</option>
-            <option>Character Sketch</option>
-            <option>Abstract Art</option>
-            <option>Clothing & Accessories</option>
-        </select>
-        <textarea name="description" placeholder="Describe what you want..." required></textarea>
-        <button type="submit">Send Request</button>
-    </form>
-</section>
 
 </body>
 </html>
