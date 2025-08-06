@@ -89,3 +89,31 @@ footer {
     text-align: center;
     padding: 20px;
 }
+.quote-form {
+    padding: 50px 20px;
+    background: #eee;
+}
+
+.quote-form form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quote-form input, 
+.quote-form textarea, 
+.quote-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.quote-form button {
+    padding: 10px;
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
